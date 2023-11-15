@@ -16,6 +16,12 @@ gem "puma", ">= 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+gem "vite_rails"
+gem "vite_ruby"
+gem "ruby-vips", "~> 2.1", ">= 2.1.4"
+gem "annotate", group: :development
+gem "devise"
+gem "name_of_person"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -38,6 +44,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -55,10 +64,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'database_cleaner'
 end
-gem "vite_rails"
-gem "vite_ruby"
-gem "ruby-vips", "~> 2.1", ">= 2.1.4"
-gem "annotate", group: :development
-gem "devise"
-gem "name_of_person"
