@@ -1,0 +1,7 @@
+<h1>Willkommen, <%= current_user.full_name %>.</h1>
+
+<hr class="my-8">
+<div id="dashboard">
+  <div><%= link_to 'Profile bearbeiten', edit_profile_path %></div>
+  <div><%= link_to 'Soulmate finden', search_path, remote: true %></div>
+</div>

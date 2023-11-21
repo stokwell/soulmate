@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -25,5 +27,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_person_name
-            
+
+  has_one :profile, dependent: :destroy
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
