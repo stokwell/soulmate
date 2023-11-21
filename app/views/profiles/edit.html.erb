@@ -1,0 +1,21 @@
+<h3 class="mb-5">Profile bearbeiten</h3>
+
+<%= form_for setup_profile(@profile), url: profile_path do |f| %>
+  <h5 class="mb-5">Addresse</h4>
+  <%= f.fields_for :address do |ff| %>
+    <div class="field">
+      <%= ff.label :city, "Wohnort", class: "label" %>
+      <%= ff.text_field :city, hint: 'No special characters.', class: "input" %>
+    </div>
+  <% end %>
+  <h5 class="mb-5">Hobbies</h4>
+  <%= f.fields_for :hobbies do |ff| %>
+    <div class="field">
+      <%= ff.label :hobby, "Hobby", class: "label" %>
+      <%= ff.text_field :name, hint: 'No special characters.', class: "input" %>
+    </div>
+  <% end %>
+  <div class="field">
+     <%= f.button :submit, class: "btn btn-primary w-full" %>
+  </div>
+<% end %>
