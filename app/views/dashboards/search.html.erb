@@ -1,0 +1,13 @@
+<% if @soulmates.present? %>
+  <ul>
+    <% @soulmates.each do |soulmate| %>
+      <li>
+        <div>
+          <%= soulmate.full_name %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No soulmate is found</p>
+<% end %>
